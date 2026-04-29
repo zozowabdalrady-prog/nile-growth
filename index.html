@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nile Growth | حلول نمو رقمية للشركات</title>
-<meta name="description" content="شركة Nile Growth تقدم التسويق الرقمي، إدارة السوشيال ميديا، الإعلانات الممولة، وتصميم استراتيجيات نمو للشركات في مصر والخليج.">
+<title>Nile Growth Marketplace | Buy & Sell Digital Products</title>
+<meta name="description" content="منصة Nile Growth Marketplace لشراء وبيع المنتجات الرقمية بسهولة. كورسات، كتب، قوالب، أدوات، وخدمات رقمية.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,25 +15,31 @@ color:#0f172a;
 line-height:1.7
 }
 header{
-background:#ffffff;
+background:#fff;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:0 6px 20px rgba(0,0,0,.05);
 position:sticky;
 top:0;
-z-index:1000;
-box-shadow:0 6px 20px rgba(0,0,0,.05)
+z-index:999
 }
 .logo{
 font-size:28px;
 font-weight:700;
-color:#0f172a
+color:#2563eb
+}
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:#0f172a;
+font-weight:600
 }
 .btn{
 background:#2563eb;
 color:#fff;
-padding:13px 24px;
+padding:12px 22px;
 border-radius:12px;
 text-decoration:none;
 display:inline-block;
@@ -44,7 +50,7 @@ transition:.3s
 padding:90px 8%;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:50px;
+gap:45px;
 align-items:center
 }
 .hero h1{
@@ -78,38 +84,18 @@ gap:22px
 }
 .card{
 background:#fff;
-padding:28px;
-border-radius:20px;
+padding:26px;
+border-radius:18px;
 box-shadow:0 12px 30px rgba(0,0,0,.06)
 }
 .card h3{
-margin-bottom:12px;
-font-size:22px
-}
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-text-align:center
-}
-.stat{
-background:#fff;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.05)
-}
-.stat h3{
-font-size:34px;
-color:#2563eb
-}
-.pricing .card{
-text-align:center
+margin-bottom:12px
 }
 .price{
-font-size:34px;
+font-size:28px;
 font-weight:bold;
-margin:15px 0;
-color:#2563eb
+color:#2563eb;
+margin:10px 0
 }
 footer{
 background:#0f172a;
@@ -127,6 +113,10 @@ font-size:38px
 .title{
 font-size:30px
 }
+header{
+flex-direction:column;
+gap:10px
+}
 }
 </style>
 </head>
@@ -134,87 +124,89 @@ font-size:30px
 <body>
 
 <header>
-<div class="logo">Nile Growth</div>
-<a class="btn" href="https://wa.me/201090454494">ابدأ الآن</a>
+<div class="logo">Nile Growth Marketplace</div>
+<nav>
+<a href="#products">المنتجات</a>
+<a href="#categories">الأقسام</a>
+<a href="#seller">ارفع منتجك</a>
+</nav>
+<a class="btn" href="https://wa.me/201090454494">تواصل</a>
 </header>
 
 <section class="hero">
 <div>
-<h1>نمو حقيقي لشركتك يبدأ من هنا</h1>
-<p>نساعد الشركات في مصر والخليج على زيادة العملاء، بناء الثقة، وتحقيق نتائج رقمية قوية عبر استراتيجيات تسويق فعالة.</p>
-<a class="btn" href="https://wa.me/201090454494">احجز استشارة مجانية</a>
+<h1>اشترِ وبِع المنتجات الرقمية بسهولة</h1>
+<p>أفضل منصة عربية لشراء وبيع الكورسات، الكتب الرقمية، القوالب، الأدوات، والخدمات الرقمية.</p>
+<a class="btn" href="#products">ابدأ التسوق</a>
+<a class="btn" href="#seller" style="background:#0f172a;margin-right:10px">ارفع منتجك</a>
 </div>
 
 <div class="hero-box">
-<h2 style="margin-bottom:20px">لماذا Nile Growth؟</h2>
-<p>✔ حلول مخصصة لكل نشاط</p>
-<p>✔ تنفيذ سريع واحترافي</p>
-<p>✔ حملات تحقق نتائج</p>
-<p>✔ دعم مباشر وسريع</p>
-<p>✔ خبرة بالسوق المصري والخليجي</p>
+<h2 style="margin-bottom:20px">Why Nile Growth?</h2>
+<p>✔ Trusted Marketplace</p>
+<p>✔ Fast Support</p>
+<p>✔ Easy Selling</p>
+<p>✔ Arabic Audience</p>
+<p>✔ Secure Deals</p>
 </div>
 </section>
 
-<section>
-<h2 class="title">أرقام تثق بها</h2>
-<div class="stats">
-<div class="stat"><h3>120+</h3><p>عميل محتمل</p></div>
-<div class="stat"><h3>3M+</h3><p>وصول رقمي</p></div>
-<div class="stat"><h3>40+</h3><p>مشروع متنوع</p></div>
-<div class="stat"><h3>95%</h3><p>رضا العملاء</p></div>
+<section id="categories">
+<h2 class="title">الأقسام | Categories</h2>
+<div class="grid">
+<div class="card"><h3>كورسات</h3><p>Courses</p></div>
+<div class="card"><h3>كتب رقمية</h3><p>E-books</p></div>
+<div class="card"><h3>قوالب</h3><p>Templates</p></div>
+<div class="card"><h3>أدوات</h3><p>Tools</p></div>
+<div class="card"><h3>خدمات</h3><p>Services</p></div>
+<div class="card"><h3>ملفات أعمال</h3><p>Business Files</p></div>
 </div>
 </section>
 
-<section>
-<h2 class="title">خدماتنا</h2>
+<section id="products">
+<h2 class="title">منتجات مميزة | Featured Products</h2>
 <div class="grid">
 
 <div class="card">
-<h3>إدارة السوشيال ميديا</h3>
-<p>إدارة احترافية تبني حضور قوي وثقة مستمرة.</p>
+<h3>كورس التسويق الرقمي</h3>
+<div class="price">299 ج</div>
+<p>تعلم التسويق من الصفر حتى الاحتراف.</p><br>
+<a class="btn" href="https://wa.me/201090454494">شراء</a>
 </div>
 
 <div class="card">
-<h3>الإعلانات الممولة</h3>
-<p>حملات مدروسة تحقق أفضل عائد ممكن.</p>
+<h3>Canva Templates Pack</h3>
+<div class="price">199 ج</div>
+<p>Ready social media templates.</p><br>
+<a class="btn" href="https://wa.me/201090454494">Buy</a>
 </div>
 
 <div class="card">
-<h3>تصميم المحتوى</h3>
-<p>تصميمات جذابة تعكس قوة البراند.</p>
-</div>
-
-<div class="card">
-<h3>استشارات النمو</h3>
-<p>خطط توسع حقيقية للشركات الطموحة.</p>
+<h3>Business Excel Toolkit</h3>
+<div class="price">149 ج</div>
+<p>Professional business sheets.</p><br>
+<a class="btn" href="https://wa.me/201090454494">Buy</a>
 </div>
 
 </div>
 </section>
 
-<section class="pricing">
-<h2 class="title">الباقات</h2>
+<section id="seller">
+<h2 class="title">ارفع منتجك وابدأ الربح</h2>
 <div class="grid">
 
 <div class="card">
-<h3>Starter</h3>
-<div class="price">2500 ج</div>
-<p>إدارة أساسية + محتوى شهري</p><br>
-<a class="btn" href="https://wa.me/201090454494">ابدأ</a>
+<h3>لماذا تبيع معنا؟</h3>
+<p>✔ جمهور عربي</p>
+<p>✔ دعم سريع</p>
+<p>✔ سهولة البيع</p>
+<p>✔ تسويق لمنتجك</p>
 </div>
 
 <div class="card">
-<h3>Business</h3>
-<div class="price">5000 ج</div>
-<p>إدارة + تصميم + إعلانات</p><br>
-<a class="btn" href="https://wa.me/201090454494">ابدأ</a>
-</div>
-
-<div class="card">
-<h3>Premium</h3>
-<div class="price">9000 ج</div>
-<p>حلول نمو كاملة للشركات</p><br>
-<a class="btn" href="https://wa.me/201090454494">ابدأ</a>
+<h3>ابدأ الآن</h3>
+<p>أرسل تفاصيل منتجك وسنتواصل معك.</p><br>
+<a class="btn" href="https://wa.me/201090454494">رفع منتج عبر واتساب</a>
 </div>
 
 </div>
@@ -222,12 +214,12 @@ font-size:30px
 
 <section style="text-align:center">
 <h2 class="title">جاهز للانطلاق؟</h2>
-<p style="margin-bottom:25px">دعنا نبني مرحلة النمو القادمة لشركتك.</p>
-<a class="btn" href="https://wa.me/201090454494">تحدث معنا الآن</a>
+<p style="margin-bottom:25px">ابدأ البيع أو التسوق الآن.</p>
+<a class="btn" href="https://wa.me/201090454494">ابدأ الآن</a>
 </section>
 
 <footer>
-© 2026 Nile Growth - جميع الحقوق محفوظة
+© 2026 Nile Growth Marketplace - All Rights Reserved
 </footer>
 
 </body>
