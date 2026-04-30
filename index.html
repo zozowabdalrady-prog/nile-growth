@@ -12,6 +12,93 @@
 👀 الزوار: 
 <img src="https://visitor-badge.laobi.icu/badge?page_id=nile-growth.vercel.app">
 </div>
+  <style>
+#empireBox{
+position:fixed;
+bottom:20px;
+left:20px;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+padding:14px 18px;
+border-radius:18px;
+box-shadow:0 12px 35px rgba(0,0,0,.18);
+z-index:99999;
+font-family:Tahoma;
+font-size:14px;
+font-weight:bold;
+max-width:320px;
+line-height:1.9;
+transform:translateY(120px);
+opacity:0;
+transition:.6s;
+border:1px solid rgba(255,255,255,.6);
+}
+#empireStats{
+position:fixed;
+bottom:20px;
+right:20px;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+padding:14px 18px;
+border-radius:18px;
+box-shadow:0 12px 35px rgba(0,0,0,.18);
+z-index:99999;
+font-family:Tahoma;
+font-size:14px;
+font-weight:bold;
+line-height:1.9;
+min-width:240px;
+}
+</style>
+
+<div id="empireBox"></div>
+
+<div id="empireStats">
+👀 يوجد الآن <span id="liveUsers">4</span> أشخاص<br>
+🔥 تم شراء <span id="salesNum">3</span> نسخ اليوم<br>
+⏳ ينتهي العرض خلال <span id="timer">15:00</span>
+</div>
+
+<script>
+const names=["أحمد","محمد","سارة","ريم","خالد","يوسف","ندى","نور"];
+const cities=["القاهرة","الرياض","جدة","دبي","الكويت","الدوحة"];
+const products=["كتاب التسويق","Templates Pack","Excel Toolkit"];
+
+function popup(){
+let n=names[Math.floor(Math.random()*names.length)];
+let c=cities[Math.floor(Math.random()*cities.length)];
+let p=products[Math.floor(Math.random()*products.length)];
+
+let box=document.getElementById("empireBox");
+box.innerHTML="🟢 "+n+" من "+c+" اشترى "+p+" الآن";
+box.style.transform="translateY(0)";
+box.style.opacity="1";
+
+setTimeout(()=>{
+box.style.transform="translateY(120px)";
+box.style.opacity="0";
+},5000);
+}
+
+setInterval(popup,9000);
+setTimeout(popup,2500);
+
+setInterval(()=>{
+document.getElementById("liveUsers").innerText=Math.floor(Math.random()*6)+2;
+document.getElementById("salesNum").innerText=Math.floor(Math.random()*5)+2;
+},4000);
+
+let total=900;
+setInterval(()=>{
+if(total>0){
+total--;
+let m=Math.floor(total/60);
+let s=total%60;
+document.getElementById("timer").innerText=
+String(m).padStart(2,'0')+":"+String(s).padStart(2,'0');
+}
+},1000);
+</script>
 body{
 font-family:Tahoma,Arial,sans-serif;
 background:#f8fbff;
