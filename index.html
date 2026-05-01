@@ -3,229 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nile Growth Marketplace | Buy & Sell Digital Products</title>
-<meta name="description" content="منصة Nile Growth Marketplace لشراء وبيع المنتجات الرقمية بسهولة. كورسات، كتب، قوالب، أدوات، وخدمات رقمية. بيع واشتري من الآن في أفضل منصة عربية للمنتجات الرقمية.">
+<title>Nile Growth Marketplace</title>
+<meta name="description" content="بيع وشراء المنتجات الرقمية بسهولة في مصر والخليج">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-  <div style="position:fixed;bottom:20px;right:20px;background:#fff;padding:10px 15px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1);z-index:9999;font-weight:bold">
-👀 الزوار: 
-<img src="https://visitor-badge.laobi.icu/badge?page_id=nile-growth.vercel.app">
-</div>
-  <style>
-#empireBox{
-position:fixed;
-bottom:20px;
-left:20px;
-background:rgba(255,255,255,.92);
-backdrop-filter:blur(10px);
-padding:14px 18px;
-border-radius:18px;
-box-shadow:0 12px 35px rgba(0,0,0,.18);
-z-index:99999;
-font-family:Tahoma;
-font-size:14px;
-font-weight:bold;
-max-width:320px;
-line-height:1.9;
-transform:translateY(120px);
-opacity:0;
-transition:.6s;
-border:1px solid rgba(255,255,255,.6);
-}
-#empireStats{
-position:fixed;
-bottom:20px;
-right:20px;
-background:rgba(255,255,255,.92);
-backdrop-filter:blur(10px);
-padding:14px 18px;
-border-radius:18px;
-box-shadow:0 12px 35px rgba(0,0,0,.18);
-z-index:99999;
-font-family:Tahoma;
-font-size:14px;
-font-weight:bold;
-line-height:1.9;
-min-width:240px;
-}
-</style>
-
-<div id="empireBox"></div>
-
-<div id="empireStats">
-👀 يوجد الآن <span id="liveUsers">4</span> أشخاص<br>
-🔥 تم شراء <span id="salesNum">3</span> نسخ اليوم<br>
-⏳ ينتهي العرض خلال <span id="timer">15:00</span>
-</div>
-
-<script>
-const names=["أحمد","محمد","سارة","ريم","خالد","يوسف","ندى","نور"];
-const cities=["القاهرة","الرياض","جدة","دبي","الكويت","الدوحة"];
-const products=["كتاب التسويق","Templates Pack","Excel Toolkit"];
-
-function popup(){
-let n=names[Math.floor(Math.random()*names.length)];
-let c=cities[Math.floor(Math.random()*cities.length)];
-let p=products[Math.floor(Math.random()*products.length)];
-
-let box=document.getElementById("empireBox");
-box.innerHTML="🟢 "+n+" من "+c+" اشترى "+p+" الآن";
-box.style.transform="translateY(0)";
-box.style.opacity="1";
-
-setTimeout(()=>{
-box.style.transform="translateY(120px)";
-box.style.opacity="0";
-},5000);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-setInterval(popup,9000);
-setTimeout(popup,2500);
-
-setInterval(()=>{
-document.getElementById("liveUsers").innerText=Math.floor(Math.random()*6)+2;
-document.getElementById("salesNum").innerText=Math.floor(Math.random()*5)+2;
-},4000);
-
-let total=900;
-setInterval(()=>{
-if(total>0){
-total--;
-let m=Math.floor(total/60);
-let s=total%60;
-document.getElementById("timer").innerText=
-String(m).padStart(2,'0')+":"+String(s).padStart(2,'0');
-}
-},1000);
-</script>
 body{
 font-family:Tahoma,Arial,sans-serif;
 background:#f8fbff;
-color:#0f172a;
-line-height:1.7
+color:#111827;
+line-height:1.8;
 }
+
 header{
-background:#fff;
+background:#ffffff;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 6px 20px rgba(0,0,0,.05);
+box-shadow:0 8px 25px rgba(0,0,0,.06);
 position:sticky;
 top:0;
-z-index:999
+z-index:999;
 }
+
 .logo{
 font-size:28px;
-font-weight:700;
-color:#2563eb
+font-weight:bold;
+color:#2563eb;
 }
+
 nav a{
-margin:0 10px;
 text-decoration:none;
-color:#0f172a;
-font-weight:600
+margin:0 10px;
+color:#111827;
+font-weight:bold;
 }
+
 .btn{
+display:inline-block;
 background:#2563eb;
 color:#fff;
 padding:12px 22px;
 border-radius:12px;
 text-decoration:none;
-display:inline-block;
-transition:.3s
-}
-.btn:hover{opacity:.9}
-.featured-btn{
-padding:14px 24px;
-font-size:16px;
 font-weight:bold;
-width:100%;
-text-align:center;
+transition:.3s;
 }
-.urgency-text{
-color:#dc2626;
-font-weight:bold;
-font-size:14px;
-margin-top:12px;
-text-align:center;
+
+.btn:hover{
+opacity:.9;
+transform:translateY(-2px);
 }
-.trust-text{
-color:#16a34a;
-font-weight:bold;
-font-size:14px;
-margin-top:8px;
-text-align:center;
-}
-.delivery-text{
-color:#2563eb;
-font-weight:bold;
-font-size:14px;
-margin-top:8px;
-text-align:center;
-}
+
 .hero{
-padding:90px 8%;
+padding:80px 8%;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:45px;
-align-items:center
+gap:40px;
+align-items:center;
 }
+
 .hero h1{
-font-size:52px;
-line-height:1.3;
-margin-bottom:20px
+font-size:48px;
+margin-bottom:20px;
+line-height:1.4;
 }
+
 .hero p{
 font-size:20px;
 color:#475569;
-margin-bottom:25px
+margin-bottom:25px;
 }
+
 .hero-box{
 background:#fff;
 padding:35px;
 border-radius:24px;
-box-shadow:0 20px 40px rgba(37,99,235,.12)
+box-shadow:0 20px 40px rgba(37,99,235,.10);
 }
+
 section{
-padding:75px 8%
+padding:70px 8%;
 }
+
 .title{
 text-align:center;
 font-size:38px;
-margin-bottom:45px
+margin-bottom:40px;
 }
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:22px
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
+
 .card{
 background:#fff;
-padding:26px;
-border-radius:18px;
-box-shadow:0 12px 30px rgba(0,0,0,.06)
+padding:24px;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+transition:.3s;
 }
-.card h3{
-margin-bottom:12px
+
+.card:hover{
+transform:translateY(-6px);
 }
+
+.card img{
+width:100%;
+border-radius:14px;
+margin-bottom:15px;
+}
+
 .price{
 font-size:28px;
 font-weight:bold;
 color:#2563eb;
-margin:10px 0
+margin:12px 0;
 }
-.featured {
-box-shadow:0 18px 45px rgba(239,68,68,.15);
-border:2px solid rgba(239,68,68,.2);
-transform:scale(1.02);
+
+.old-price{
+color:#999;
+text-decoration:line-through;
+font-size:18px;
 }
-.featured-excel {
-box-shadow:0 18px 45px rgba(37,99,235,.15);
-border:2px solid rgba(37,99,235,.2);
-transform:scale(1.02);
-}
+
 .badge{
 display:inline-block;
 background:#22c55e;
@@ -236,46 +146,53 @@ font-size:12px;
 font-weight:bold;
 margin-bottom:10px;
 }
-.badge-blue{
-display:inline-block;
-background:#2563eb;
-color:#fff;
-padding:6px 12px;
-border-radius:8px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:10px;
+
+.featured{
+border:2px solid #f59e0b;
+box-shadow:0 15px 35px rgba(245,158,11,.15);
 }
-.old-price{
-font-size:18px;
-color:#999;
-text-decoration:line-through;
-}
-.offer-text{
-color:#dc2626;
-font-weight:bold;
-font-size:14px;
-}
+
 footer{
 background:#0f172a;
 color:#fff;
 text-align:center;
-padding:30px
+padding:30px;
+margin-top:40px;
 }
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25d366;
+color:#fff;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
 @media(max-width:900px){
-.hero{
-grid-template-columns:1fr
-}
-.hero h1{
-font-size:38px
-}
-.title{
-font-size:30px
-}
+
 header{
 flex-direction:column;
-gap:10px
+gap:10px;
 }
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.title{
+font-size:30px;
+}
+
 }
 </style>
 </head>
@@ -283,150 +200,147 @@ gap:10px
 <body>
 
 <header>
-<div class="logo">Nile Growth Marketplace</div>
+<div class="logo">Nile Growth</div>
+
 <nav>
 <a href="#products">المنتجات</a>
-<a href="#categories">الأقسام</a>
-<a href="#seller">ارفع منتجك</a>
+<a href="#free">مجاني</a>
+<a href="#seller">بيع معنا</a>
 </nav>
-<a class="btn" href="https://wa.me/201090454494">تواصل</a>
+
+<a class="btn" href="https://wa.me/201090454494">واتساب</a>
 </header>
 
 <section class="hero">
+
 <div>
 <h1>اشترِ وبِع المنتجات الرقمية بسهولة</h1>
-<p>أفضل منصة عربية لشراء وبيع الكورسات، الكتب الرقمية، القوالب، الأدوات، والخدمات الرقمية.</p>
-<a class="btn" href="#products">ابدأ التسوق</a>
-<a class="btn" href="#seller" style="background:#0f172a;margin-right:10px">ارفع منتجك</a>
+<p>
+أفضل منصة عربية للكتب الرقمية، القوالب، الأدوات، والخدمات الرقمية.
+</p>
+
+<a class="btn" href="#products">ابدأ الآن</a>
+<a class="btn" href="#free" style="background:#111827;margin-right:10px;">تحميل مجاني</a>
 </div>
 
 <div class="hero-box">
-<h2 style="margin-bottom:20px">Why Nile Growth?</h2>
-<p>✔ Trusted Marketplace</p>
-<p>✔ Fast Support</p>
-<p>✔ Easy Selling</p>
-<p>✔ Arabic Audience</p>
-<p>✔ Secure Deals</p>
+<h2 style="margin-bottom:20px;">لماذا Nile Growth؟</h2>
+<p>✔ تسليم سريع</p>
+<p>✔ أسعار مناسبة</p>
+<p>✔ دعم مباشر</p>
+<p>✔ منتجات مطلوبة</p>
+<p>✔ فرص ربح وسفراء</p>
 </div>
+
 </section>
 
-<section id="categories">
-<h2 class="title">الأقسام | Categories</h2>
-<div class="grid">
-<div class="card"><h3>كورسات</h3><p>Courses</p></div>
-<div class="card"><h3>كتب رقمية</h3><p>E-books</p></div>
-<div class="card"><h3>قوالب</h3><p>Templates</p></div>
-<div class="card"><h3>أدوات</h3><p>Tools</p></div>
-<div class="card"><h3>خدمات</h3><p>Services</p></div>
-<div class="card"><h3>ملفات أعمال</h3><p>Business Files</p></div>
-</div>
-</section>
+<section id="free">
 
-<section id="products">
-<h2 class="title">منتجات مميزة | Featured Products</h2>
+<h2 class="title">🎁 هدية مجانية</h2>
+
 <div class="grid">
 
 <div class="card featured">
-<div class="badge">🔥 الأكثر طلبًا</div>
-<img src="book.png" style="width:100%;border-radius:14px;margin-bottom:15px;">
-<h3>📘 Nile Grows Marketing Playbook 2026</h3>
-<div class="old-price">149 ج</div>
-<div class="price">99 ج</div>
-<p class="offer-text">عرض اليوم فقط 99 ج</p>
-<p>دليل عملي شامل لتسويق مشروعك وزيادة العملاء والمبيعات خطوة بخطوة.</p><br>
-<a class="btn featured-btn" href="https://wa.me/201090454494?text=أريد شراء كتاب Nile Grows Marketing Playbook">اشترِ الآن واحصل عليه فورًا</a>
-<p class="urgency-text">⏳ العرض ينتهي الليلة</p>
-<p class="trust-text">🔥 تم شراء 4 نسخ اليوم</p>
-<p class="delivery-text">📥 يتم إرسال الكتاب فورًا بعد التواصل والدفع</p>
+<div class="badge">مجاني الآن</div>
+<h3>📘 البداية الذكية 2026</h3>
+<p>
+نسخة مجانية تعلمك كيف تبدأ الربح الرقمي من البيت خطوة بخطوة.
+</p>
+
+<div class="price">0 جنيه</div>
+
+<a class="btn" href="YOUR_FREE_FILE_LINK">📥 تحميل الآن</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="products">
+
+<h2 class="title">🔥 المنتجات المميزة</h2>
+
+<div class="grid">
+
+<div class="card featured">
+<div class="badge">الأكثر مبيعًا</div>
+<img src="book.png">
+<h3>📘 باقة الربح الرقمي</h3>
+<div class="old-price">299 جنيه</div>
+<div class="price">149 جنيه</div>
+<p>أفكار منتجات + طرق بيع + أدوات جاهزة للمبتدئين.</p>
+<br>
+<a class="btn" href="https://wa.me/201090454494">اشترِ الآن</a>
 </div>
 
 <div class="card">
-<h3>كورس التسويق الرقمي</h3>
-<div class="price">299 ج</div>
-<p>تعلم التسويق من الصفر حتى الاحتراف.</p><br>
+<img src="canva.png">
+<h3>🎨 Canva Templates Pack</h3>
+<div class="price">99 جنيه</div>
+<p>قوالب جاهزة للمطاعم والعيادات والمتاجر.</p>
+<br>
 <a class="btn" href="https://wa.me/201090454494">شراء</a>
 </div>
 
 <div class="card">
-<img src="canva.png" style="width:100%;border-radius:14px;margin-bottom:15px;">
-<h3>Canva Templates Pack</h3>
-<div class="price">199 ج</div>
-<p>Ready social media templates.</p><br>
-<a class="btn" href="https://wa.me/201090454494">Buy</a>
+<img src="excel.png">
+<h3>📊 Business Excel Toolkit</h3>
+<div class="price">129 جنيه</div>
+<p>ملفات جاهزة لإدارة المصروفات والأرباح.</p>
+<br>
+<a class="btn" href="https://wa.me/201090454494">شراء</a>
 </div>
 
-<div class="card featured-excel">
-<div class="badge-blue">💼 الأفضل للأعمال</div>
-<img src="excel.png" style="width:100%;border-radius:14px;margin-bottom:15px;">
-<h3>Business Excel Toolkit</h3><div class="card" style="box-shadow:0 18px 40px rgba(16,185,129,.12);border:2px solid rgba(16,185,129,.15);">
-
-<img src="excel.png" style="width:100%;border-radius:14px;margin-bottom:15px;">
-
-<div style="display:inline-block;background:#16a34a;color:#fff;padding:6px 12px;border-radius:8px;font-size:12px;font-weight:bold;margin-bottom:10px;">
-💼 الأفضل للأعمال
+<div class="card">
+<h3>🤖 100 Prompt تسويق</h3>
+<div class="price">99 جنيه</div>
+<p>أوامر جاهزة للإعلانات والمحتوى وجذب العملاء.</p>
+<br>
+<a class="btn" href="https://wa.me/201090454494">شراء</a>
 </div>
 
-<h3>Business Excel Toolkit</h3>
-
-<div style="font-size:18px;color:#999;text-decoration:line-through;">199 ج</div>
-
-<div class="price">129 ج</div>
-
-<div style="color:#dc2626;font-weight:bold;font-size:14px;margin-bottom:12px;">
-عرض الشركات اليوم
-</div>
-
-<p>Professional business sheets.</p><br>
-
-<a class="btn" href="https://wa.me/201090454494?text=أريد شراء Business Excel Toolkit" style="width:100%;text-align:center;font-weight:bold;">
-اشترِ الآن واحصل عليه فورًا
-</a>
-
-<div style="color:#2563eb;font-weight:bold;font-size:14px;margin-top:10px;text-align:center;">
-📥 يتم الإرسال فورًا بعد التواصل
+<div class="card">
+<h3>📱 رسائل واتساب للبيع</h3>
+<div class="price">79 جنيه</div>
+<p>رسائل جاهزة لإقناع العملاء وإغلاق المبيعات.</p>
+<br>
+<a class="btn" href="https://wa.me/201090454494">شراء</a>
 </div>
 
 </div>
-<div class="old-price">199 ج</div>
-<div class="price">129 ج</div>
-<p class="offer-text">عرض الشركات اليوم</p>
-<p>Professional business sheets.</p><br>
-<a class="btn featured-btn" href="https://wa.me/201090454494?text=أريد شراء Business Excel Toolkit">اشترِ الآن واحصل عليه فورًا</a>
-<p class="delivery-text">📥 يتم الإرسال فورًا بعد التواصل</p>
-</div>
-</div>
+
 </section>
 
 <section id="seller">
-<h2 class="title">ارفع منتجك وابدأ الربح</h2>
+
+<h2 class="title">💼 ارفع منتجك وابدأ الربح</h2>
+
 <div class="grid">
 
 <div class="card">
 <h3>لماذا تبيع معنا؟</h3>
 <p>✔ جمهور عربي</p>
-<p>✔ دعم سريع</p>
-<p>✔ سهولة البيع</p>
 <p>✔ تسويق لمنتجك</p>
+<p>✔ دعم مباشر</p>
+<p>✔ سهولة التواصل</p>
 </div>
 
 <div class="card">
 <h3>ابدأ الآن</h3>
-<p>أرسل تفاصيل منتجك وسنتواصل معك.</p><br>
-<a class="btn" href="https://wa.me/201090454494">رفع منتج عبر واتساب</a>
+<p>أرسل تفاصيل منتجك عبر واتساب.</p>
+<br>
+<a class="btn" href="https://wa.me/201090454494">رفع منتج</a>
 </div>
 
 </div>
-</section>
 
-<section style="text-align:center">
-<h2 class="title">جاهز للانطلاق؟</h2>
-<p style="margin-bottom:25px">ابدأ البيع أو التسوق الآن.</p>
-<a class="btn" href="https://wa.me/201090454494">ابدأ الآن</a>
 </section>
 
 <footer>
-© 2026 Nile Growth Marketplace - All Rights Reserved
+© 2026 Nile Growth Marketplace
 </footer>
+
+<a class="whatsapp" href="https://wa.me/201090454494">واتساب</a>
 
 </body>
 </html>
