@@ -1,358 +1,371 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nile Growth Marketplace</title>
-<meta name="description" content="بيع وشراء المنتجات الرقمية بسهولة في مصر والخليج">
+export default function NileGrowthX() {
+  const products = [
+    {
+      title: "📘 باقة الربح الرقمي",
+      oldPrice: "299 جنيه",
+      price: "149 جنيه",
+      desc: "أفكار منتجات + طرق بيع + أدوات جاهزة للمبتدئين.",
+      btn: "اشترِ الآن",
+    },
+    {
+      title: "🎨 Canva Templates Pack",
+      oldPrice: "99 جنيه",
+      price: "49 جنيه",
+      desc: "قوالب احترافية للمطاعم والعيادات والمتاجر.",
+      btn: "شراء",
+    },
+    {
+      title: "📊 Business Excel Toolkit",
+      oldPrice: "129 جنيه",
+      price: "79 جنيه",
+      desc: "ملفات جاهزة لإدارة الأرباح والمصروفات.",
+      btn: "شراء",
+    },
+    {
+      title: "🤖 100 Prompt تسويق",
+      oldPrice: "99 جنيه",
+      price: "59 جنيه",
+      desc: "أوامر احترافية للمحتوى والإعلانات وجذب العملاء.",
+      btn: "شراء",
+    },
+  ];
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Navbar */}
+      <header className="flex items-center justify-between px-8 py-6 border-b border-white/10">
+        <h1 className="text-2xl font-bold tracking-wide text-blue-400">
+          Nile Growth x
+        </h1>
+
+        <nav className="hidden md:flex gap-8 text-sm text-gray-300">
+          <a href="#products" className="hover:text-white transition">
+            المنتجات
+          </a>
+          <a href="#features" className="hover:text-white transition">
+            المميزات
+          </a>
+          <a href="#community" className="hover:text-white transition">
+            المجتمع
+          </a>
+          <a href="#newsletter" className="hover:text-white transition">
+            البريد
+          </a>
+        </nav>
+
+        <a
+          href="https://nilegrowth.gumroad.com"
+          target="_blank"
+          className="bg-blue-500 hover:bg-blue-600 transition px-5 py-2 rounded-xl font-medium"
+        >
+          ابدأ الآن
+        </a>
+      </header>
+
+      {/* Hero */}
+      <section className="px-8 py-24 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div className="inline-block px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm mb-6">
+            منصة عربية للمنتجات الرقمية 🚀
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            ابدأ بيع وشراء
+            <span className="text-blue-400 block mt-2">
+              المنتجات الرقمية بسهولة
+            </span>
+          </h2>
+
+          <p className="text-gray-400 text-lg leading-8 mb-8 max-w-xl">
+            أفضل منصة عربية للكتب الرقمية، القوالب، الأدوات، والخدمات
+            الرقمية مع واجهة احترافية وتجربة شراء سهلة.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://nilegrowth.gumroad.com"
+              target="_blank"
+              className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg shadow-blue-500/20"
+            >
+              تصفح المنتجات
+            </a>
+
+            <a
+              href="#newsletter"
+              className="border border-white/20 hover:border-blue-400 transition px-8 py-4 rounded-2xl text-lg"
+            >
+              تحميل الهدية المجانية 🎁
+            </a>
+          </div>
+
+          <div className="flex gap-8 mt-10 text-sm text-gray-400">
+            <div>✔ تسليم فوري</div>
+            <div>✔ منتجات احترافية</div>
+            <div>✔ دعم مباشر</div>
+          </div>
+        </div>
+
+        {/* Mockup */}
+        <div className="relative">
+          <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+          <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 border border-white/10 rounded-3xl p-8 shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+              alt="ebook"
+              className="rounded-2xl w-full h-[420px] object-cover"
+            />
+
+            <div className="mt-6 bg-black/40 border border-white/10 rounded-2xl p-5">
+              <h3 className="text-2xl font-bold text-blue-400 mb-2">
+                📘 البداية الذكية 2026
+              </h3>
+              <p className="text-gray-400 mb-4">
+                تعلم كيف تبدأ الربح الرقمي من البيت خطوة بخطوة.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <span className="text-3xl font-bold">149 جنيه</span>
+
+                <a
+                  href="https://nilegrowth.gumroad.com"
+                  target="_blank"
+                  className="bg-blue-500 px-5 py-3 rounded-xl hover:bg-blue-600 transition"
+                >
+                  شراء الآن
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="px-8 py-20 bg-white/[0.02] border-y border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-4xl font-bold text-center mb-14">
+            لماذا Nile Growth x؟
+          </h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "🚀 تسليم فوري",
+              "💰 أسعار مناسبة",
+              "📞 دعم مباشر",
+              "📈 فرص ربح وسفراء",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-black border border-white/10 rounded-3xl p-8 hover:border-blue-500/50 transition"
+              >
+                <p className="text-xl font-semibold">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products */}
+      <section id="products" className="px-8 py-24 max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mb-14">
+          <div>
+            <p className="text-blue-400 mb-2">🔥 المنتجات المميزة</p>
+            <h3 className="text-4xl font-bold">الأكثر مبيعًا</h3>
+          </div>
+
+          <a
+            href="https://nilegrowth.gumroad.com"
+            target="_blank"
+            className="text-blue-400 hover:text-blue-300 transition"
+          >
+            عرض الكل →
+          </a>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-b from-gray-900 to-black border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-2 hover:border-blue-500/40 transition duration-300"
+            >
+              <div className="h-52 bg-gray-800">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                  alt="product"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-3">{product.title}</h4>
+                <p className="text-gray-400 text-sm leading-7 mb-5">
+                  {product.desc}
+                </p>
+
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-gray-500 line-through text-sm">
+                    {product.oldPrice}
+                  </span>
+                  <span className="text-2xl font-bold text-blue-400">
+                    {product.price}
+                  </span>
+                </div>
+
+                <a
+                  href="https://nilegrowth.gumroad.com"
+                  target="_blank"
+                  className="block text-center bg-blue-500 hover:bg-blue-600 transition py-3 rounded-xl font-medium"
+                >
+                  {product.btn}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Email Collection */}
+      <section
+        id="newsletter"
+        className="px-8 py-24 bg-gradient-to-r from-blue-900/20 to-black"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-4xl font-bold mb-5">
+            🎁 احصل على هدية مجانية
+          </h3>
+
+          <p className="text-gray-400 text-lg mb-10 leading-8">
+            اشترك في البريد الإلكتروني لتحصل على كتاب مجاني وأحدث عروض
+            المنتجات الرقمية.
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+            <input
+              type="email"
+              placeholder="اكتب بريدك الإلكتروني"
+              className="flex-1 bg-black border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500"
+            />
+
+            <button className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl font-semibold">
+              اشترك الآن
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* TikTok Section */}
+      <section id="community" className="px-8 py-24 max-w-7xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-blue-400 mb-3">📱 TikTok Marketing</p>
+
+          <h3 className="text-5xl font-bold mb-8 leading-tight">
+            ابنِ جمهورك وارفع مبيعاتك
+            <span className="text-blue-400 block mt-3">
+              عبر المحتوى القصير
+            </span>
+          </h3>
+
+          <p className="text-gray-400 text-lg leading-8 mb-10">
+            انشر محتوى يومي على TikTok وInstagram لبناء الثقة وجذب العملاء
+            لمنتجاتك الرقمية.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            {[
+              {
+                title: "🎥 أفكار محتوى",
+                desc: "فيديوهات قصيرة لجذب العملاء بسهولة.",
+              },
+              {
+                title: "📈 بناء الجمهور",
+                desc: "تحويل المشاهدات إلى متابعين وعملاء.",
+              },
+              {
+                title: "💰 زيادة المبيعات",
+                desc: "ربط المحتوى بمنتجات Gumroad مباشرة.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-black border border-white/10 rounded-3xl p-8"
+              >
+                <h4 className="text-2xl font-bold mb-4">{item.title}</h4>
+                <p className="text-gray-400 leading-7">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="px-8 py-24 bg-white/[0.02] border-y border-white/5">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-4xl font-bold mb-14">آراء العملاء</h3>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              "منتج ممتاز وسهل التطبيق جدًا 🔥",
+              "التصميم احترافي والمحتوى مفيد للمبتدئين.",
+              "أفضل بداية لفهم المنتجات الرقمية عربيًا.",
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="bg-black border border-white/10 rounded-3xl p-8"
+              >
+                <p className="text-gray-300 leading-8">{review}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-8 py-14 border-t border-white/10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+          <div>
+            <h4 className="text-3xl font-bold text-blue-400 mb-4">
+              Nile Growth x
+            </h4>
+            <p className="text-gray-400 max-w-md leading-8">
+              منصة عربية احترافية لبيع وشراء المنتجات الرقمية وبناء مصادر
+              دخل عبر الإنترنت.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-gray-400">
+            <div>
+              <h5 className="text-white font-semibold mb-4">المنصة</h5>
+              <ul className="space-y-3">
+                <li>المنتجات</li>
+                <li>المميزات</li>
+                <li>الأسعار</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-white font-semibold mb-4">التواصل</h5>
+              <ul className="space-y-3">
+                <li>Instagram</li>
+                <li>TikTok</li>
+                <li>WhatsApp</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-white font-semibold mb-4">القانونية</h5>
+              <ul className="space-y-3">
+                <li>Privacy Policy</li>
+                <li>Terms</li>
+                <li>Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center text-gray-500 mt-12 text-sm">
+          © 2026 Nile Growth x — All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  );
 }
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69f78fad8523f61c32f248ce/1jnngifb7';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-body{
-font-family:Tahoma,Arial,sans-serif;
-background:#f8fbff;
-color:#111827;
-line-height:1.8;
-}
-
-header{
-background:#ffffff;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 8px 25px rgba(0,0,0,.06);
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#2563eb;
-}
-
-nav a{
-text-decoration:none;
-margin:0 10px;
-color:#111827;
-font-weight:bold;
-}
-
-.btn{
-display:inline-block;
-background:#2563eb;
-color:#fff;
-padding:12px 22px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.btn:hover{
-opacity:.9;
-transform:translateY(-2px);
-}
-
-.hero{
-padding:80px 8%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-line-height:1.4;
-}
-
-.hero p{
-font-size:20px;
-color:#475569;
-margin-bottom:25px;
-}
-
-.hero-box{
-background:#fff;
-padding:35px;
-border-radius:24px;
-box-shadow:0 20px 40px rgba(37,99,235,.10);
-}
-
-section{
-padding:70px 8%;
-}
-
-.title{
-text-align:center;
-font-size:38px;
-margin-bottom:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.card{
-background:#fff;
-padding:24px;
-border-radius:20px;
-box-shadow:0 12px 30px rgba(0,0,0,.06);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card img{
-width:100%;
-border-radius:14px;
-margin-bottom:15px;
-}
-
-.price{
-font-size:28px;
-font-weight:bold;
-color:#2563eb;
-margin:12px 0;
-}
-
-.old-price{
-color:#999;
-text-decoration:line-through;
-font-size:18px;
-}
-
-.badge{
-display:inline-block;
-background:#22c55e;
-color:#fff;
-padding:6px 12px;
-border-radius:8px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.featured{
-border:2px solid #f59e0b;
-box-shadow:0 15px 35px rgba(245,158,11,.15);
-}
-
-footer{
-background:#0f172a;
-color:#fff;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#25d366;
-color:#fff;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-z-index:999;
-box-shadow:0 12px 30px rgba(0,0,0,.18);
-}
-
-@media(max-width:900px){
-
-header{
-flex-direction:column;
-gap:10px;
-}
-
-.hero{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.title{
-font-size:30px;
-}
-
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo">Nile Growth</div>
-
-<nav>
-<a href="#products">المنتجات</a>
-<a href="#free">مجاني</a>
-<a href="#seller">بيع معنا</a>
-</nav>
-
-<a class="btn" href="https://wa.me/201090454494">واتساب</a>
-</header>
-
-<section class="hero">
-
-<div>
-<h1>اشترِ وبِع المنتجات الرقمية بسهولة</h1>
-<p>
-أفضل منصة عربية للكتب الرقمية، القوالب، الأدوات، والخدمات الرقمية.
-</p>
-
-<a class="btn" href="#products">ابدأ الآن</a>
-<a class="btn" href="#free" style="background:#111827;margin-right:10px;">تحميل مجاني</a>
-</div>
-
-<div class="hero-box">
-<h2 style="margin-bottom:20px;">لماذا Nile Growth؟</h2>
-<p>✔ تسليم سريع</p>
-<p>✔ أسعار مناسبة</p>
-<p>✔ دعم مباشر</p>
-<p>✔ منتجات مطلوبة</p>
-<p>✔ فرص ربح وسفراء</p>
-</div>
-
-</section>
-
-<section id="free">
-
-<h2 class="title">🎁 هدية مجانية</h2>
-
-<div class="grid">
-
-<div class="card featured">
-<div class="badge">مجاني الآن</div>
-<h3>📘 البداية الذكية 2026</h3>
-<p>
-نسخة مجانية تعلمك كيف تبدأ الربح الرقمي من البيت خطوة بخطوة.
-</p>
-
-<div class="price">0 جنيه</div>
-
-<a class="btn" href="YOUR_FREE_FILE_LINK">📥 تحميل الآن</a>
-</div>
-
-</div>
-
-</section>
-
-<section id="products">
-
-<h2 class="title">🔥 المنتجات المميزة</h2>
-
-<div class="grid">
-
-<div class="card featured">
-<div class="badge">الأكثر مبيعًا</div>
-<img src="book.png">
-<h3>📘 باقة الربح الرقمي</h3>
-<div class="old-price">299 جنيه</div>
-<div class="price">149 جنيه</div>
-<p>أفكار منتجات + طرق بيع + أدوات جاهزة للمبتدئين.</p>
-<br>
-<a class="btn" href="https://wa.me/201090454494">اشترِ الآن</a>
-</div>
-
-<div class="card">
-<img src="canva.png">
-<h3>🎨 Canva Templates Pack</h3>
-<div class="price">99 جنيه</div>
-<p>قوالب جاهزة للمطاعم والعيادات والمتاجر.</p>
-<br>
-<a class="btn" href="https://wa.me/201090454494">شراء</a>
-</div>
-
-<div class="card">
-<img src="excel.png">
-<h3>📊 Business Excel Toolkit</h3>
-<div class="price">129 جنيه</div>
-<p>ملفات جاهزة لإدارة المصروفات والأرباح.</p>
-<br>
-<a class="btn" href="https://wa.me/201090454494">شراء</a>
-</div>
-
-<div class="card">
-<h3>🤖 100 Prompt تسويق</h3>
-<div class="price">99 جنيه</div>
-<p>أوامر جاهزة للإعلانات والمحتوى وجذب العملاء.</p>
-<br>
-<a class="btn" href="https://wa.me/201090454494">شراء</a>
-</div>
-
-<div class="card">
-<h3>📱 رسائل واتساب للبيع</h3>
-<div class="price">79 جنيه</div>
-<p>رسائل جاهزة لإقناع العملاء وإغلاق المبيعات.</p>
-<br>
-<a class="btn" href="https://wa.me/201090454494">شراء</a>
-</div>
-
-</div>
-
-</section>
-
-<section id="seller">
-
-<h2 class="title">💼 ارفع منتجك وابدأ الربح</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>لماذا تبيع معنا؟</h3>
-<p>✔ جمهور عربي</p>
-<p>✔ تسويق لمنتجك</p>
-<p>✔ دعم مباشر</p>
-<p>✔ سهولة التواصل</p>
-</div>
-
-<div class="card">
-<h3>ابدأ الآن</h3>
-<p>أرسل تفاصيل منتجك عبر واتساب.</p>
-<br>
-<a class="btn" href="https://wa.me/201090454494">رفع منتج</a>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Nile Growth Marketplace
-</footer>
-
-<a class="whatsapp" href="https://wa.me/201090454494">واتساب</a>
-
-</body>
-</html>
